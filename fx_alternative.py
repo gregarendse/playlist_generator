@@ -28,7 +28,7 @@ def read_playlist_from_file(file_path):
 
 def write_playlist_to_file(file_path, play_list):
     "Write playlist to CSV file"
-    with open("fx_alt_play_list.csv", 'wb') as csvfile:
+    with open(file_path, 'wb') as csvfile:
         for song in play_list:
             csvfile.write(song.id.strftime('%Y-%m-%d %H:%M') + "," + song.title + "," + song.artist + "\n")
 
@@ -94,9 +94,6 @@ def main(argv):
                 break
         else:
             # Add the song to the play list
-            print(song.id.strftime('%Y-%m-%d %H:%M') + "," +
-                  song.title + "," + 
-                  song.artist + "\n")
             play_list.append(song)
 
     write_playlist_to_file(play_list_csv_file_path, play_list)
