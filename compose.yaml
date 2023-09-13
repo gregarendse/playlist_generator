@@ -1,0 +1,8 @@
+version: "3"
+
+services:
+  playlister:
+    build: .
+    command: ["python", "-m", "playlister", "config.yaml"]
+    volumes:
+      - "/tmp/pyppeteer:/home/user/.local/share/pyppeteer:rw"

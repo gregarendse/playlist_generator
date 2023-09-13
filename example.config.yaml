@@ -1,0 +1,7 @@
+spotify:
+  grant_type: authorization_code
+  client_id: #  <client-id>
+  client_secret: #  <client-secret>
+  redirect_uri: http://localhost:8080/callback
+  scope: playlist-read-private playlist-read-collaborative playlist-modify-private playlist-modify-public
+ 
